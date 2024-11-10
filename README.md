@@ -85,4 +85,4 @@ Each log level is represented by an emoji and a color for quick identification.
 
 ## License 📝
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/utpal-barman/trace-logger-flutter/blob/main/LICENSE) file for details.
+This project is licensed under the BSD 3-Clause License - see the [LICENSE](https://github.com/utpal-barman/trace-logger-flutter/blob/main/LICENSE) file for details.
