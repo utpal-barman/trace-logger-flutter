@@ -1,4 +1,4 @@
-# 🕵️ trace_logger: ^1.0.1
+# 🕵️ trace_logger: ^1.0.2
 
 ## Lightweight Flutter/Dart Logger with Class Traceability using the power of StackTrace 🔍
 
@@ -22,7 +22,7 @@
 
    ```yaml
    dependencies:
-     trace_logger: ^1.0.1
+     trace_logger: ^1.0.2
    ```
 
 2. **Install** the package:
