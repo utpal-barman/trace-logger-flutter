@@ -1,13 +1,16 @@
-name: ci
+name: PR validation
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 on:
-  pull_request:
+  push:
     branches:
+      - develop
       - main
+
+  pull_request:
 
 jobs:
   semantic_pull_request:
@@ -16,10 +19,24 @@ jobs:
   spell-check:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/spell_check.yml@v1
     with:
-      includes: "**/*.md"
+      includes: '**/*.md'
       modified_files_only: false
 
-  build:
-    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
-    with:
-      flutter_channel: stable
+  pr_validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📚 Git Checkout
+        uses: actions/checkout@v4
+
+      - name: 🐦 Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+          cache-key: flutter-:os:-:channel:-:version:-:arch:-:hash:-${{ hashFiles('**/pubspec.lock') }}
+
+      - name: 📦 Install Dependencies
+        run: flutter pub get
+
+      - name: 🕵️ Analyze
+        run: flutter analyze lib test

@@ -4,6 +4,7 @@ import 'package:trace_logger/trace_logger.dart';
 var logger = TraceLogger();
 
 void main() {
+  logger.d('message');
   runApp(const MyApp());
 }
 

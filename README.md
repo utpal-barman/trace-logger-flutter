@@ -1,6 +1,6 @@
-# 🕵️ trace_logger: ^1.0.0
+# 🕵️ trace_logger: ^1.0.1
 
-## Lightweight Flutter Logger with Class Traceability 🔍
+## Lightweight Flutter/Dart Logger with Class Traceability using the power of StackTrace 🔍
 
 [![pub package](https://img.shields.io/pub/v/trace_logger.svg?logo=dart&logoColor=00b9fc)](https://pub.dartlang.org/packages/trace_logger)
 [![Last Commits](https://img.shields.io/github/last-commit/utpal-barman/trace-logger-flutter?logo=git&logoColor=white)](https://github.com/utpal-barman/trace-logger-flutter/commits/main)
@@ -8,7 +8,7 @@
 [![Code size](https://img.shields.io/github/languages/code-size/utpal-barman/trace-logger-flutter?logo=github&logoColor=white)](https://github.com/utpal-barman/trace-logger-flutter)
 [![License](https://img.shields.io/github/license/utpal-barman/trace-logger-flutter?logo=open-source-initiative&logoColor=green)](https://github.com/utpal-barman/trace-logger-flutter/blob/main/LICENSE)
 
-🔥 **TraceLogger** is a simple Flutter logging package that logs messages with class names and includes color-coded output for easier debugging and better readability. Use it to automatically capture the calling class context in your logs, along with level-specific emojis!
+🔥 **TraceLogger** is a simple Flutter logging package that logs messages with class names and includes color-coded output for easier debugging and better readability. Use it to automatically capture the calling class context in your logs, along with level-specific emojis (🕵️ ℹ️ ⚠️ ❌) !
 
 ## Resources 📚
 
@@ -22,7 +22,7 @@
 
    ```yaml
    dependencies:
-     trace_logger: ^1.0.0
+     trace_logger: ^1.0.1
    ```
 
 2. **Install** the package:
@@ -59,17 +59,17 @@ class HomeScreen {
 Output:
 
 ```plaintext
-🐛 [DEBUG: HomeScreen] Debugging information
-ℹ️ [INFO: HomeScreen] Informational message
-⚠️ [WARNING: HomeScreen] Warning message
-❌ [ERROR: HomeScreen] Error message
+🕵️ [HomeScreen] Debugging information
+ℹ️ [HomeScreen] Informational message
+⚠️ [HomeScreen] Warning message
+❌ [HomeScreen] Error message
 ```
 
 ### Log Levels and Emojis
 
 | Level  | Emoji | Color   |
 |--------|-------|---------|
-| Debug  | 🐛    | Cyan    |
+| Debug  | 🕵️    | Cyan    |
 | Info   | ℹ️    | Green   |
 | Warning| ⚠️    | Yellow  |
 | Error  | ❌    | Red     |
