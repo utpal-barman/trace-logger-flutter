@@ -1,0 +1,23 @@
+name: trace_logger
+description: A logger library with the stack trace class context
+version: 1.0.0
+homepage: "https://github.com/utpal-barman/trace-logger-flutter"
+repository: "https://github.com/utpal-barman/trace-logger-flutter"
+topics:
+  - logger
+  - log
+  - logging
+
+environment:
+  sdk: ^3.5.0
+  flutter: ^3.24.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: ^1.0.4
+  very_good_analysis: ^6.0.0
