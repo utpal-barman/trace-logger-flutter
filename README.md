@@ -58,7 +58,7 @@ class HomeScreen {
 
 Output:
 
-```plaintext
+```txt
 🕵️ [HomeScreen] Debugging information
 ℹ️ [HomeScreen] Informational message
 ⚠️ [HomeScreen] Warning message
